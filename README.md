@@ -21,3 +21,4 @@ git pull origin dev
 go to your branch to start working
 
 `git checkout task/[your branch name like in the docx file]`
+before
