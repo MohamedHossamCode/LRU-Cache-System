@@ -5,7 +5,7 @@
 
 ---
 # Tasks
-- [ ] Node Design
+- [X] Node Design
 - [ ] DLL Initialization
 - [ ] Insert at Front
 - [ ] Remove Node
