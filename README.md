@@ -7,7 +7,7 @@
 # Tasks
 - [X] Node Design
 - [X] DLL Initialization
-- [ ] Insert at Front
+- [X] Insert at Front
 - [ ] Remove Node
 - [ ] Move to Front
 - [ ] Remove LRU
