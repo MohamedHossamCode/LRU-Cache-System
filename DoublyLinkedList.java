@@ -25,9 +25,28 @@ public class DoublyLinkedList {
             // Set the previous of the head to null as this is a linear DLL, not circular
             head.setPrev(null);
         }
+        
     }
-
-
+public void removeNode(Node node) {
+    if (node == head && node == tail){
+        head = null;
+        tail = null;
+    }
+    else if (node == head)
+    {    head = head.getNext();
+        head.setPrev(null);
+    }
+    else if (node == tail)
+    {    tail = tail.getPrev();
+        tail.setNext(null);
+    }
+    else
+    {    node.getPrev().setNext(node.getNext());
+        node.getNext().setPrev(node.getPrev());
+    }
+node.setNext(null);
+node.setPrev(null);
+}
 
 
 }
