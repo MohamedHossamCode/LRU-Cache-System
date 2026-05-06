@@ -8,8 +8,8 @@
 - [X] Node Design
 - [X] DLL Initialization
 - [X] Insert at Front
-- [ ] Remove Node
-- [ ] Move to Front
+- [x] Remove Node
+- [x] Move to Front
 - [ ] Remove LRU
 - [ ] Hash Table 
 - [ ] LRU Cache Core Logic
