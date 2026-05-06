@@ -9,7 +9,7 @@
 - [X] DLL Initialization
 - [X] Insert at Front
 - [x] Remove Node
-- [x] Move to Front
+- [] Move to Front
 - [ ] Remove LRU
 - [ ] Hash Table 
 - [ ] LRU Cache Core Logic
