@@ -27,25 +27,34 @@ public class DoublyLinkedList {
         }
         
     }
-public void removeNode(Node node) {
-    if (node == head && node == tail){
+public void removeNode(Node node)
+{
+    if (node == null || head == null) return;
+    // if node already dleted
+    if (node.getPrev() == null && node.getNext() == null && node != head) return;
+    
+    if (node == head && node == tail)
+    {
         head = null;
         tail = null;
     }
     else if (node == head)
-    {    head = head.getNext();
+    {
+        head = head.getNext();
         head.setPrev(null);
     }
-    else if (node == tail)
-    {    tail = tail.getPrev();
+    else if (node == tail) {
+        tail = tail.getPrev();
         tail.setNext(null);
     }
     else
-    {    node.getPrev().setNext(node.getNext());
+        {
+        node.getPrev().setNext(node.getNext());
         node.getNext().setPrev(node.getPrev());
     }
-node.setNext(null);
-node.setPrev(null);
+
+    node.setNext(null);
+    node.setPrev(null);
 }
 
 
