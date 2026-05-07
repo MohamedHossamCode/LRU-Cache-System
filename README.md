@@ -42,7 +42,7 @@ git merge dev
 **Start working after that**
 
 ## 2. Push your work
-`git add theFileYouHavebeenEditing`
+`git add theFileYouHavebeenEditing.java`
 
 `git commit -m "Explain in short what you have done"`
 
