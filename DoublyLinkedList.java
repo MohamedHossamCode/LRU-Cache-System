@@ -53,9 +53,61 @@ public void removeNode(Node node)
         node.getNext().setPrev(node.getPrev());
     }
 
+     public void moveToFront(Node node){
+            
+           if(node==null) {
+            System.out.println("ERROR! node can't be null.");
+            return;
+        }
+        
+           if(node.getPrev()== null && node.getNext() == null && node!=head){
+        
+            System.out.println("ERROR! node does not exist in list.");
+            return;
+        }        
+        
+        if (node==head) {
+        System.out.println("The node is already at the front.");
+        return;
+    }
+
+    if (node != tail) {
+       
+        node.getPrev().setNext(node.getNext());
+        node.getNext().setPrev(node.getPrev());
+    } else {
+        tail = node.getPrev(); 
+        if (tail != null) {
+            tail.setNext(null);
+      }
+
+    }
+    node.setNext(head);
+    node.setPrev(null); 
+    
+    if (head != null) {
+                head.setPrev(node);
+            }
+            
+    head = node;
+    
+    
+     System.out.println("Node successfully moved to front!");
+   }    
     node.setNext(null);
     node.setPrev(null);
 }
 
+    public Node findNode(int value) {
+    Node current = head;
+    while (current != null) {
+        if (current.getKey() == value) {
+            return current; // Found it!
+        }
+        current = current.getNext();
+    }
+        System.out.println("ERROR! node does not exist.");
+    return null; // Value doesn't exist
+}
 
 }
