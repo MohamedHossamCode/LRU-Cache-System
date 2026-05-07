@@ -6,7 +6,14 @@ public class DoublyLinkedList {
         this.head = null;
         this.tail = null;
     }
-
+    public Node removeLeastRecentlyUsed(){
+        if(tail==null){
+            return null;
+        }
+        Node removedNode = tail;
+        removeNode(removedNode);
+        return removedNode;
+    }
     public void insertFront(Node newNode) {
         // In case the list is empty
         if (this.head == null) {
