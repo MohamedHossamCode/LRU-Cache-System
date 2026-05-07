@@ -27,20 +27,24 @@ public class DoublyLinkedList {
         }
     }
 
-    public void moveToFront(Node node){
-        
-        if(node == null) {
+     public void moveToFront(Node node){
+            
+           if(node==null) {
             System.out.println("ERROR! node can't be null.");
             return;
         }
         
+           if(node.getPrev()== null && node.getNext() == null && node!=head){
         
-        if (node == head) {
+            System.out.println("ERROR! node does not exist in list.");
+            return;
+        }        
+        
+        if (node==head) {
         System.out.println("The node is already at the front.");
         return;
     }
 
-    
     if (node != tail) {
        
         node.getPrev().setNext(node.getNext());
@@ -49,12 +53,11 @@ public class DoublyLinkedList {
         tail = node.getPrev(); 
         if (tail != null) {
             tail.setNext(null);
-     }
+      }
 
     }
     node.setNext(head);
     node.setPrev(null); 
-    
     
     if (head != null) {
                 head.setPrev(node);
@@ -64,8 +67,7 @@ public class DoublyLinkedList {
     
     
      System.out.println("Node successfully moved to front!");
-   }
-    
+   }    
 
     public Node findNode(int value) {
     Node current = head;
@@ -78,8 +80,5 @@ public class DoublyLinkedList {
         System.out.println("ERROR! node does not exist.");
     return null; // Value doesn't exist
 }
-
-
-
 
 }
