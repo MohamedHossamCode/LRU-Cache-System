@@ -3,6 +3,7 @@ public class Node {
     private int value;
     private Node prev;
     private Node next;
+    protected Node nextInHash = null;
 
     public Node() {
         this.prev = null;
