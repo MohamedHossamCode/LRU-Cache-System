@@ -8,7 +8,7 @@
 - [X] Node Design
 - [X] DLL Initialization
 - [X] Insert at Front
-- [ ] Remove Node
+- [x] Remove Node
 - [ ] Move to Front
 - [ ] Remove LRU
 - [ ] Hash Table 
@@ -42,6 +42,10 @@ git merge dev
 **Start working after that**
 
 ## 2. Push your work
+`git add theFileYouHavebeenEditing.java`
+
+`git commit -m "Explain in short what you have done"`
+
 `git push origin task/[your branch name like in the docx file]`
 
 ***Then merge into dev branch*** via pull request on the site and wait until the code being reviewed
