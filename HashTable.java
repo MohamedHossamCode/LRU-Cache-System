@@ -1,4 +1,3 @@
-
 public class HashTable {
     private Node[] table;
     private int capacity;
