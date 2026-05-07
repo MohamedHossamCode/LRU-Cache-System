@@ -9,8 +9,8 @@
 - [X] DLL Initialization
 - [X] Insert at Front
 - [x] Remove Node
-- [ ] Move to Front
-- [ ] Remove LRU
+- [X] Move to Front
+- [X] Remove LRU
 - [ ] Hash Table 
 - [ ] LRU Cache Core Logic
 - [ ] Capacity & Eviction
