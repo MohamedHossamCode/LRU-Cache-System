@@ -34,40 +34,37 @@ public class DoublyLinkedList {
         }
         
     }
-public void removeNode(Node node)
-{
-    if (node == null || head == null) return;
-    // if node already dleted
-    if (node.getPrev() == null && node.getNext() == null && node != head) return;
-    
-    if (node == head && node == tail)
-    {
-        head = null;
-        tail = null;
-    }
-    else if (node == head)
-    {
-        head = head.getNext();
-        head.setPrev(null);
-    }
-    else if (node == tail) {
-        tail = tail.getPrev();
-        tail.setNext(null);
-    }
-    else
-        {
-        node.getPrev().setNext(node.getNext());
-        node.getNext().setPrev(node.getPrev());
+    public void removeNode(Node node) {
+        if (node == null || head == null) return;
+        // if node already dleted
+        if (node.getPrev() == null && node.getNext() == null && node != head) return;
+        
+        if (node == head && node == tail) {
+            head = null;
+            tail = null;
+        }
+        else if (node == head){
+            head = head.getNext();
+            head.setPrev(null);
+        }
+        else if (node == tail) {
+            tail = tail.getPrev();
+            tail.setNext(null);
+        }
+        else {
+            node.getPrev().setNext(node.getNext());
+            node.getNext().setPrev(node.getPrev());
+        }
     }
 
-     public void moveToFront(Node node){
+    public void moveToFront(Node node){
             
-           if(node==null) {
+        if(node==null) {
             System.out.println("ERROR! node can't be null.");
             return;
         }
         
-           if(node.getPrev()== null && node.getNext() == null && node!=head){
+        if(node.getPrev()== null && node.getNext() == null && node!=head){
         
             System.out.println("ERROR! node does not exist in list.");
             return;
@@ -79,42 +76,37 @@ public void removeNode(Node node)
     }
 
     if (node != tail) {
-       
         node.getPrev().setNext(node.getNext());
         node.getNext().setPrev(node.getPrev());
     } else {
         tail = node.getPrev(); 
         if (tail != null) {
             tail.setNext(null);
-      }
-
+        }
     }
     node.setNext(head);
     node.setPrev(null); 
     
     if (head != null) {
-                head.setPrev(node);
-            }
-            
+        head.setPrev(node);
+    }
+
     head = node;
     
     
-     System.out.println("Node successfully moved to front!");
-   }    
+    System.out.println("Node successfully moved to front!");
     node.setNext(null);
     node.setPrev(null);
-}
-
+   }    
     public Node findNode(int value) {
-    Node current = head;
-    while (current != null) {
-        if (current.getKey() == value) {
-            return current; // Found it!
+        Node current = head;
+        while (current != null) {
+            if (current.getKey() == value) {
+                return current; // Found it!
+            }
+            current = current.getNext();
         }
-        current = current.getNext();
-    }
         System.out.println("ERROR! node does not exist.");
-    return null; // Value doesn't exist
-}
-
+        return null; // Value doesn't exist
+    }
 }
