@@ -11,10 +11,10 @@
 - [x] Remove Node
 - [X] Move to Front
 - [X] Remove LRU
-- [ ] Hash Table 
-- [ ] LRU Cache Core Logic
-- [ ] Capacity & Eviction
-- [ ] Testing
+- [X] Hash Table 
+- [X] LRU Cache Core Logic
+- [X] Capacity & Eviction
+- [X] Testing
 ---
 # Work flow
 ### Important notes :
